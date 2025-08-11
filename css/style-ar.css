@@ -1,0 +1,63 @@
+/* arabic.css */
+
+/*#gallery .owl-carousel {
+  direction: ltr !important;
+}*/
+
+#gallery .gallery-item-lg {
+  direction: rtl;
+  text-align: right;
+}
+
+#gallery [style*="margin-left"] {
+  margin-right: 15px !important;
+  margin-left: 0 !important;
+}
+
+/* Force the shady overlay box to cover the whole service item properly */
+#service .post-service {
+  position: relative;
+  direction: rtl;
+  text-align: right;
+}
+
+#service .post-service:before {
+  left: auto;      /* unset left */
+  right: 0;        /* stick to right side in RTL */
+  background-color: rgba(75, 67, 56, 0.8);
+  /* keep height and z-index as is */
+}
+
+/* Fix margin and padding flips inside service content */
+#service .post-service > div:last-child {
+  margin-left: 15px !important; /* override LTR margin-right */
+  margin-right: 0 !important;
+}
+
+/* If images or inner elements have margin-left or margin-right, adjust accordingly */
+#service img {
+  /* example: if images had margins set for LTR */
+  margin-left: 0 !important;
+  margin-right: 15px !important;
+}
+
+/* Confirm owl-carousel container direction */
+/*#service .owl-carousel {
+  direction: ltr !important; 
+}
+*/
+#service .post-service:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(75, 67, 56, 0.8);
+}
+
+a[href^="tel:"] {
+  direction: ltr;
+  unicode-bidi: embed;
+}

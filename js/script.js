@@ -247,6 +247,8 @@ $document.ready(function () {
 			} );
 		}
 
+		var isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+
 		carousel.owlCarousel( {
 			autoplay:           isNoviBuilder ? false : carousel.attr( 'data-autoplay' ) !== 'false',
 			autoplayTimeout:    carousel.attr( "data-autoplay" ) ? Number( carousel.attr( "data-autoplay" ) ) : 3000,
@@ -264,7 +266,8 @@ $document.ready(function () {
 			animateOut:         carousel.attr( 'data-animation-out' ) ? carousel.attr( 'data-animation-out' ) : false,
 			responsive:         responsive,
 			navText:            carousel.attr( 'data-nav-text' ) ? $.parseJSON( carousel.attr( 'data-nav-text' ) ) : [],
-			navClass:           carousel.attr( 'data-nav-class' ) ? $.parseJSON( carousel.attr( 'data-nav-class' ) ) : [ 'owl-prev', 'owl-next' ]
+			navClass:           carousel.attr( 'data-nav-class' ) ? $.parseJSON( carousel.attr( 'data-nav-class' ) ) : [ 'owl-prev', 'owl-next' ],
+			rtl: isRtl
 		} );
 	}
 
