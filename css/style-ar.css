@@ -61,3 +61,60 @@ a[href^="tel:"] {
   direction: ltr;
   unicode-bidi: embed;
 }
+
+.rd-navbar-nav-wrap {
+  direction: rtl;       /* For Arabic */
+  overflow: visible;    /* Make sure text doesn't get clipped */
+}
+
+.rd-navbar-nav > li > a {
+  padding: 10px 15px;   /* Adjust padding for better fit */
+  white-space: nowrap;  /* Prevent line breaks inside menu items */
+}
+
+.rd-navbar-nav-wrap {
+  right: 0 !important;   
+  left: auto !important;
+}
+
+.rd-navbar-toggle {
+  float: left;           
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+
+.rd-navbar-nav li a {
+  text-align: right;
+  display: block;
+}
+
+.rd-navbar-brand {
+  float: right;
+}
+
+.rd-navbar-fixed .rd-navbar-toggle {
+  right:3px;
+}
+
+.rd-navbar-fixed .rd-navbar-brand {
+  text-align: right;
+  right: 56px;
+}
+
+@media (max-width: 991px) {
+  .rd-navbar-nav-wrap {
+    display: none;  /* hide menu on small screens initially */
+    direction: rtl; /* make sure the menu text is right-to-left */
+    text-align: right; /* align menu text right */
+  }
+
+  .rd-navbar-nav-wrap.active, /* or the class added when menu opens */
+  .rd-navbar-nav-wrap.open {
+    display: block; /* show menu when toggled */
+  }
+}
+
+
+
+
