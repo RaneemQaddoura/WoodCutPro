@@ -102,16 +102,16 @@ a[href^="tel:"] {
   right: 56px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .rd-navbar-nav-wrap {
     display: none;  /* hide menu on small screens initially */
     direction: rtl; /* make sure the menu text is right-to-left */
     text-align: right; /* align menu text right */
   }
 
-  .rd-navbar-nav-wrap.active, /* or the class added when menu opens */
+  .rd-navbar-nav-wrap.active, 
   .rd-navbar-nav-wrap.open {
-    display: block; /* show menu when toggled */
+    display: block; 
   }
 }
 
